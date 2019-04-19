@@ -10,7 +10,7 @@ using AventStack.ExtentReports;
 
 public class Configuration
     {
-    public static string browser_type = "Firefox";
+    public static string browser_type = 
     public static string chrome_type 
         {
             get
