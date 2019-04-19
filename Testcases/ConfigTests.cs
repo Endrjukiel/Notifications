@@ -6,48 +6,41 @@ using System.Threading;
 namespace SeleniumAutomation.Testcases
 {
     //[TestFixture]
-    public class ConfigTests: BaseTest
+    public class ConfigTests : BaseTest
     {
-        
+
         [Test]
-        public void test()
+        public void CanAccessGoogle()
         {
             LoginPage new_page = new LoginPage();
 
             new_page.GotoPage("http://www.google.com");
             new_page.CheckTitle();
-       
+
         }
-        
+
         [Test]
-        public void test2()
+        public void CanSearchInGoogle()
 
         {
-           
-           LoginPage new_page = new LoginPage();
 
-            new_page.GotoPage("http://www.google.com");
+            LoginPage new_page = new LoginPage();
+
+            new_page.GotoPage();
             new_page.Search_something("malaga krakow flights today");
+
         }
-        //[Category("Gmail Login")]
-        //[Test]
-        //public void test2()
-        //{
-        //    new_page.GotoPage("http://google.com");
+        [Test]
+        public void CanEnterGmailFromGoogle()
 
-        //    new_page.CheckTitle();
+        {
 
-        //}
+            LoginPage new_page = new LoginPage();
+
+            new_page.GotoPage();
+            new_page.GotoLogin();
+        }
     }
 
 }
-//    public class ConfigTest : SeleniumAutomation.Testcases.BaseTest
-//{
-//        LoginPage new_page = new LoginPage();
 
-//        public void VerifyDriver()
-//        {
-//            new_page.GotoPage("http://www.google.co.in");
-//            new_page.CheckTitle();
-//        }
-//    }

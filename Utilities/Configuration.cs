@@ -29,8 +29,10 @@ public class Configuration
             {
                 case "Chrome":
                     ChromeOptions options = new ChromeOptions();
-                    options.AddArguments("incognito");
-
+                    options.AddArgument("incognito");
+                    options.AddArgument("–disable-extensions");
+                    options.AddArgument("--start-maximized"); // "--disable-cache"
+                    options.AddArgument("--disable-cache");
                     driver = new ChromeDriver(options);
                     break;
                 case "IE":
