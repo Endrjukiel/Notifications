@@ -16,7 +16,7 @@ namespace SeleniumAutomation.pageObjects
             search = By.XPath("//*[@id=\"tsf\"]/div[2]/div/div[1]/div/div[1]/input");
             LoginButton = By.LinkText("Zaloguj się");
         }
-        public void GotoPage(String URL= "http://www.google.com")  
+        public void GotoPage(String URL= "https://www.google.com/?hl=pl")  
         {
             driver.Navigate().GoToUrl(URL);
 
@@ -34,6 +34,10 @@ namespace SeleniumAutomation.pageObjects
         public void GotoLogin()
         {
             driver.FindElement(LoginButton).Click(); //change to GmailPage Object
+        }
+        public void EnterGmail()
+        {
+
         }
 
     }

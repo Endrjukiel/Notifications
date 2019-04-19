@@ -31,7 +31,7 @@ namespace SeleniumAutomation.Testcases
 
         }
         [Test]
-        public void CanEnterGmailFromGoogle()
+        public void CanAccesLoginPane()
 
         {
 
@@ -39,6 +39,23 @@ namespace SeleniumAutomation.Testcases
 
             new_page.GotoPage();
             new_page.GotoLogin();
+        }
+        [Test]
+        public void CanLoginToGoogle()
+
+        {
+
+            LoginPage new_page = new LoginPage();
+
+            new_page.GotoPage();
+            new_page.GotoLogin();
+
+            LoginGmailPage new_login = new LoginGmailPage();
+
+            new_login.SetUser("endrjukiller@gmail.com");
+            new_login.SetPassword("a.1666665");
+
+
         }
     }
 
