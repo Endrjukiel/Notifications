@@ -5,8 +5,8 @@ using System.Threading;
 
 namespace SeleniumAutomation.Testcases
 {
-    [TestFixture]
-    public class InboxPageTest: BaseTest
+    //[TestFixture]
+    public class ConfigTests: BaseTest
     {
         
         [Test]
@@ -27,7 +27,7 @@ namespace SeleniumAutomation.Testcases
            LoginPage new_page = new LoginPage();
 
             new_page.GotoPage("http://www.google.com");
-            new_page.CheckTitle();
+            new_page.Search_something();
 
         }
         //[Category("Gmail Login")]

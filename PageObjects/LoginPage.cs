@@ -35,6 +35,10 @@ namespace SeleniumAutomation.pageObjects
             title = driver.Title;
             Assert.AreEqual("Google", title);
         }
+        public void Search_something()
+        {
+            driver.FindElement(search).SendKeys("malaga krakow flights");
+        }
     }
 }
  

@@ -10,29 +10,22 @@ using AventStack.ExtentReports;
 
 public class Configuration
     {
-        private static string _chrome_type;
-        public static string chrome_type
+    public static string browser_type;
+    public static string chrome_type 
         {
             get
             {
-                if (_chrome_type == null && TestContext.Parameters.Exists("browser_type"))
-                {
-                    _chrome_type = TestContext.Parameters["browser_type"];
-                }
-                else
-                {
-                    throw new ArgumentException($"The parameter 'WebAppUrl' was not found, please provide a value for this parameter.");
-                }
-                return _chrome_type;
+            browser_type = TestContext.Parameters["browser_type"].ToString();
+                return browser_type;
             }
-
         }
 
         public static IWebDriver driver;
+        
 
-        public static IWebDriver CreateDriver(string chrome_type)  //chrome  --> CHROME  aa
+        public static IWebDriver CreateDriver(string chrome_type) 
         {
-            switch (chrome_type)
+        switch (chrome_type)
             {
                 case "Chrome":
                     ChromeOptions options = new ChromeOptions();

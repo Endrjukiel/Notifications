@@ -12,28 +12,26 @@ using System.Threading.Tasks;
 using AventStack.ExtentReports;
 
 namespace SeleniumAutomation.Testcases
-{
-    
-    public class BaseTest: Configuration
+{ 
+
+    [TestFixture]
+    public abstract class BaseTest: Configuration
 
     {
 
-        [OneTimeSetUp]
-        
+        [SetUp]
+       
         public void startBrowser()
         {
-            
-            string browser_type = TestContext.Parameters["browser_type"].ToString();
             Configuration.CreateDriver(chrome_type);
         }
 
-        [OneTimeTearDown]
+        [TearDown]
 
         public void closeBrowser()
         {
-            Configuration.CloseDriver();
-             
+            Configuration.CloseDriver();            
         }
 
     }
-    }
+}
