@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace SeleniumAutomation.Testcases
 {
-    //[TestFixture]
+    [TestFixture]
     public class ConfigTests : BaseTest
     {
 
@@ -21,20 +21,15 @@ namespace SeleniumAutomation.Testcases
 
         [Test]
         public void CanSearchInGoogle()
-
         {
-
             LoginPage new_page = new LoginPage();
 
             new_page.GotoPage();
             new_page.Search_something("malaga krakow flights today");
-
         }
         [Test]
         public void CanAccesLoginPane()
-
         {
-
             LoginPage new_page = new LoginPage();
 
             new_page.GotoPage();
@@ -42,9 +37,7 @@ namespace SeleniumAutomation.Testcases
         }
         [Test]
         public void CanLoginToGoogle()
-
         {
-
             LoginPage new_page = new LoginPage();
 
             new_page.GotoPage();
@@ -54,10 +47,19 @@ namespace SeleniumAutomation.Testcases
 
             new_login.SetUser("endrjukiller@gmail.com");
             new_login.SetPassword("a.1666665");
-
-
         }
-    }
 
+        [Test]
+        public void CanNavToGmailAndSeeEmails()
+        {
+            CanLoginToGoogle();
+
+            LoginPage new_page = new LoginPage();
+
+            new_page.EnterGmail();
+        }
+
+
+    }
 }
 

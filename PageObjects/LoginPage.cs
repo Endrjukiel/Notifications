@@ -9,12 +9,14 @@ namespace SeleniumAutomation.pageObjects
     {
         public By search;
         public By LoginButton;
+        public By GmailButton;
         public string title;
 
         public LoginPage()
         {
             search = By.XPath("//*[@id=\"tsf\"]/div[2]/div/div[1]/div/div[1]/input");
             LoginButton = By.LinkText("Zaloguj się");
+            GmailButton = By.LinkText("Gmail");
         }
         public void GotoPage(String URL= "https://www.google.com/?hl=pl")  
         {
@@ -37,7 +39,7 @@ namespace SeleniumAutomation.pageObjects
         }
         public void EnterGmail()
         {
-
+            driver.FindElement(GmailButton).Click();
         }
 
     }
