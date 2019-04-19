@@ -13,7 +13,7 @@ using AventStack.ExtentReports;
 
 namespace SeleniumAutomation.Testcases
 {
-    [SetUpFixture]
+    
     public class BaseTest: Configuration
 
     {

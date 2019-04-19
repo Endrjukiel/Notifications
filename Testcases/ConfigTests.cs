@@ -27,6 +27,7 @@ namespace SeleniumAutomation.Testcases
            LoginPage new_page = new LoginPage();
 
             new_page.GotoPage("http://www.google.com");
+            new_page.CheckTitle();
 
         }
         //[Category("Gmail Login")]

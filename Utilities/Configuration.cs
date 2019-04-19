@@ -10,7 +10,6 @@ using AventStack.ExtentReports;
 
 public class Configuration
     {
-        public static ExtentTest test { get; set; }
         private static string _chrome_type;
         public static string chrome_type
         {
