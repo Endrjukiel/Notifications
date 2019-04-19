@@ -1,0 +1,13 @@
+﻿<RunSettings>
+
+  <TestRunParameters>
+    <!-- End Points -->  
+    <Parameter name="browser_type" value="IE" />
+    <Parameter name="Options" value="incognito" />
+  </TestRunParameters>
+
+  <MSTest>
+    <DeploymentEnabled>False</DeploymentEnabled>
+  </MSTest>
+
+</RunSettings>
