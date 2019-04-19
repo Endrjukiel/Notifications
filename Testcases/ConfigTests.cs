@@ -27,8 +27,7 @@ namespace SeleniumAutomation.Testcases
            LoginPage new_page = new LoginPage();
 
             new_page.GotoPage("http://www.google.com");
-            new_page.Search_something();
-
+            new_page.Search_something("malaga krakow flights today");
         }
         //[Category("Gmail Login")]
         //[Test]
