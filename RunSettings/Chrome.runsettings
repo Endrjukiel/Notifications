@@ -3,8 +3,7 @@
   <TestRunParameters>
     <!-- End Points -->  
     <Parameter name="browser_type" value="Chrome" />
-    <Parameter name="browser_type" value="Firefox" />
-    <Parameter name="browser_type" value="IE" />
+    <Parameter name="Options" value="incognito" />
   </TestRunParameters>
 
   <MSTest>
