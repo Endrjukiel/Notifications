@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('packages\NUnit.3.11.0\build\NUnit.props')" />
   <Import Project="packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('packages\NUnit.3.11.0\build\NUnit.props')" />
   <Import Project="packages\Microsoft.NET.Test.Sdk.16.0.1\build\net40\Microsoft.NET.Test.Sdk.props" Condition="Exists('packages\Microsoft.NET.Test.Sdk.16.0.1\build\net40\Microsoft.NET.Test.Sdk.props')" />
   <Import Project="packages\Microsoft.CodeCoverage.16.0.1\build\netstandard1.0\Microsoft.CodeCoverage.props" Condition="Exists('packages\Microsoft.CodeCoverage.16.0.1\build\netstandard1.0\Microsoft.CodeCoverage.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -43,8 +43,8 @@
     <Reference Include="ExtentReports, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\ExtentReports.4.0.3\lib\ExtentReports.dll</HintPath>
     </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.11.2.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>packages\HtmlAgilityPack.1.11.2\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.11.3.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>packages\HtmlAgilityPack.1.11.3\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNetCore.Html.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.AspNetCore.Html.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Html.Abstractions.dll</HintPath>
@@ -81,9 +81,6 @@
     <Reference Include="nunit-agent-x86, Version=3.10.0.0, Culture=neutral, processorArchitecture=x86">
       <HintPath>packages\NUnit.Engine.3.10.0\lib\net20\nunit-agent-x86.exe</HintPath>
     </Reference>
-    <Reference Include="nunit.core.engine, Version=3.0.5715.30860, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>packages\NUnit.Core.Engine.3.0.0-beta-4\lib\nunit.core.engine.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.engine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>packages\NUnit.Engine.3.10.0\lib\net20\nunit.engine.dll</HintPath>
     </Reference>
@@ -110,7 +107,7 @@
       <HintPath>packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Collections.Immutable.1.6.0-preview3.19128.7\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+      <HintPath>packages\System.Collections.Immutable.1.6.0-preview4.19212.13\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -120,7 +117,7 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.6.0-preview3.19128.7\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.6.0-preview4.19212.13\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
@@ -169,6 +166,9 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.2\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
       <Private>True</Private>
@@ -180,18 +180,24 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.6.0-preview4.19212.13\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Reflection.Metadata, Version=1.4.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Reflection.Metadata.1.7.0-preview3.19128.7\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+      <HintPath>packages\System.Reflection.Metadata.1.7.0-preview4.19212.13\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.6.0-preview4.19212.13\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
@@ -229,7 +235,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Text.Encodings.Web.4.6.0-preview3.19128.7\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+      <HintPath>packages\System.Text.Encodings.Web.4.6.0-preview4.19212.13\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Text.RegularExpressions.4.3.0\lib\net463\System.Text.RegularExpressions.dll</HintPath>
@@ -249,11 +255,11 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.4.0.0-alpha01\lib\net47\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.Support.4.0.0-alpha01\lib\net47\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -287,7 +293,6 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Selenium.Chrome.WebDriver.2.45\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.Chrome.WebDriver.2.45\build\Selenium.Chrome.WebDriver.targets'))" />
-    <Error Condition="!Exists('packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets'))" />
     <Error Condition="!Exists('packages\Selenium.WebDriver.IEDriver.3.141.59\build\Selenium.WebDriver.IEDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.WebDriver.IEDriver.3.141.59\build\Selenium.WebDriver.IEDriver.targets'))" />
     <Error Condition="!Exists('packages\Selenium.InternetExplorer.WebDriver.3.141.5\build\Selenium.InternetExplorer.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.InternetExplorer.WebDriver.3.141.5\build\Selenium.InternetExplorer.WebDriver.targets'))" />
     <Error Condition="!Exists('packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
@@ -295,14 +300,17 @@
     <Error Condition="!Exists('packages\Microsoft.CodeCoverage.16.0.1\build\netstandard1.0\Microsoft.CodeCoverage.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeCoverage.16.0.1\build\netstandard1.0\Microsoft.CodeCoverage.targets'))" />
     <Error Condition="!Exists('packages\Microsoft.NET.Test.Sdk.16.0.1\build\net40\Microsoft.NET.Test.Sdk.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NET.Test.Sdk.16.0.1\build\net40\Microsoft.NET.Test.Sdk.props'))" />
     <Error Condition="!Exists('packages\Microsoft.NET.Test.Sdk.16.0.1\build\net40\Microsoft.NET.Test.Sdk.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NET.Test.Sdk.16.0.1\build\net40\Microsoft.NET.Test.Sdk.targets'))" />
-    <Error Condition="!Exists('packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props'))" />
     <Error Condition="!Exists('packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit3TestAdapter.3.13.0\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets'))" />
+    <Error Condition="!Exists('packages\Selenium.WebDriver.GeckoDriver.0.24.0\build\Selenium.WebDriver.GeckoDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Selenium.WebDriver.GeckoDriver.0.24.0\build\Selenium.WebDriver.GeckoDriver.targets'))" />
   </Target>
   <Import Project="packages\Selenium.Chrome.WebDriver.2.45\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('packages\Selenium.Chrome.WebDriver.2.45\build\Selenium.Chrome.WebDriver.targets')" />
-  <Import Project="packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets')" />
   <Import Project="packages\Selenium.WebDriver.IEDriver.3.141.59\build\Selenium.WebDriver.IEDriver.targets" Condition="Exists('packages\Selenium.WebDriver.IEDriver.3.141.59\build\Selenium.WebDriver.IEDriver.targets')" />
   <Import Project="packages\Selenium.InternetExplorer.WebDriver.3.141.5\build\Selenium.InternetExplorer.WebDriver.targets" Condition="Exists('packages\Selenium.InternetExplorer.WebDriver.3.141.5\build\Selenium.InternetExplorer.WebDriver.targets')" />
   <Import Project="packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <Import Project="packages\Microsoft.CodeCoverage.16.0.1\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('packages\Microsoft.CodeCoverage.16.0.1\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
   <Import Project="packages\Microsoft.NET.Test.Sdk.16.0.1\build\net40\Microsoft.NET.Test.Sdk.targets" Condition="Exists('packages\Microsoft.NET.Test.Sdk.16.0.1\build\net40\Microsoft.NET.Test.Sdk.targets')" />
+  <Import Project="packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('packages\Selenium.Firefox.WebDriver.0.23.0\build\Selenium.Firefox.WebDriver.targets')" />
+  <Import Project="packages\Selenium.WebDriver.GeckoDriver.0.24.0\build\Selenium.WebDriver.GeckoDriver.targets" Condition="Exists('packages\Selenium.WebDriver.GeckoDriver.0.24.0\build\Selenium.WebDriver.GeckoDriver.targets')" />
 </Project>
