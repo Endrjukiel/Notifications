@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-
+using System.Threading;
 
 namespace SeleniumAutomation.Testcases
 { 
@@ -10,9 +10,11 @@ namespace SeleniumAutomation.Testcases
     {
 
         [SetUp]
-       
+        
+        
         public void startBrowser()
         {
+            Thread.Sleep(5000);
             Configuration.CreateDriver(chrome_type);
         }
 

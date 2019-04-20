@@ -8,10 +8,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using AventStack.ExtentReports;
 
+
 public class Configuration
     {
     public static string browser_type;
     public static string chrome_type = Environment.GetEnvironmentVariable("BROWSER_1", EnvironmentVariableTarget.Machine);
+    
     //public static string chrome_type
     //{
     //    get
