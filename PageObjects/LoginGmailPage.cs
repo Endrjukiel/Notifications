@@ -31,7 +31,7 @@ namespace SeleniumAutomation.pageObjects
        public void SetPassword(String user)
         {
             IWebElement userButton = driver.FindElement(NextPassword);
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(Password));
             driver.FindElement(Password).SendKeys(user);
             Assert.AreEqual("Dalej", userButton.Text);
